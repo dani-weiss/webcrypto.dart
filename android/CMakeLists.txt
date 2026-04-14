@@ -14,6 +14,7 @@
 
 cmake_minimum_required(VERSION 3.10.0)
 project("webcrypto" LANGUAGES C)
+set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,-z,max-page-size=16384")
 
 enable_language(ASM)
 
